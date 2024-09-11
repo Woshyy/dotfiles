@@ -1,8 +1,9 @@
-{
+[{
   "layer": "top", // Waybar at top layer
   "position": "top", // Waybar position (top|bottom|left|right)
   "height": 30,
   "margin": "0 0 0 0",
+  "output": "DP-1",
   // Choose the order of the modules idle_inhibitor
   "modules-left": [
     "sway/workspaces"
@@ -183,11 +184,11 @@
   //     "interval": 1
   // },
   "cpu": {
-    "format": " {usage: >3}%",
+    "format": "{usage: >3}%",
     "on-click": "alacritty -e htop"
   },
   "memory": {
-    "format": " {: >3}%",
+    "format": "{: >3}%",
     "on-click": "alacritty -e htop"
   },
   "temperature": {
@@ -274,4 +275,12 @@
     "on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
     "tooltip": false
   }
-}
+},
+{
+  "layers": "top",
+  "position": "top",
+
+  // Bar for the second monitor (e.g., HDMI-1) with different modules
+  "output": "HDMI-A-1",
+  "modules-left": ["sway/workspaces"],
+}]
