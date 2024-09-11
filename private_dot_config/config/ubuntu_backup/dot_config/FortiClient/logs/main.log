@@ -1,0 +1,22 @@
+[2023-08-28 16:34:40.988] [info]  Starting FortiTray
+[2023-08-28 16:34:40.993] [info]  Platform detected: ubuntu
+[2023-08-28 16:34:40.996] [info]  [ '/opt/forticlient/gui/FortiClient-linux-x64/FortiClient' ]
+[2023-08-28 16:34:41.047] [info]  Saml - init
+[2023-08-28 16:34:41.862] [info]  compliance configDir=/home/woshyy/.config/FortiClient/config
+[2023-08-28 16:34:41.867] [info]  did-finish-load
+[2023-08-28 16:34:41.868] [info]  ready-to-show
+[2023-08-28 16:34:42.920] [info]  Events -  IPC_RENDERER_REQUEST.FETCH_INVITATION_CODE inviteCode=null
+[2023-08-28 16:34:42.978] [info]  IPC_RENDERER_REQUEST.LOADED
+[2023-08-28 16:34:42.979] [info]  Events - processArgv ["/opt/forticlient/gui/FortiClient-linux-x64/FortiClient"]
+[2023-08-28 16:34:48.830] [info]  window-all-closed
+[2023-09-01 13:02:59.600] [info]  Starting FortiTray
+[2023-09-01 13:02:59.606] [info]  Platform detected: ubuntu
+[2023-09-01 13:02:59.608] [info]  [ '/opt/forticlient/gui/FortiClient-linux-x64/FortiClient' ]
+[2023-09-01 13:02:59.700] [info]  Saml - init
+[2023-09-01 13:03:00.592] [info]  compliance configDir=/home/woshyy/.config/FortiClient/config
+[2023-09-01 13:03:00.598] [info]  did-finish-load
+[2023-09-01 13:03:00.600] [info]  ready-to-show
+[2023-09-01 13:03:01.705] [info]  Events -  IPC_RENDERER_REQUEST.FETCH_INVITATION_CODE inviteCode=null
+[2023-09-01 13:03:01.824] [info]  IPC_RENDERER_REQUEST.LOADED
+[2023-09-01 13:03:01.826] [info]  Events - processArgv ["/opt/forticlient/gui/FortiClient-linux-x64/FortiClient"]
+[2023-09-01 13:03:31.774] [info]  window-all-closed

@@ -1,14 +1,15 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your Oh My Zsh installation.
+# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
+# load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula"
+source ~/.oh-my-zsh/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,44 +71,76 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
-source ~/.oh-my-zsh/custom/themes/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
-
-plugins=(git
-	 zsh-syntax-highlighting
- 	 zsh-autosuggestions
- 	)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
+# source $ZSH/antigen.zsh
 
-source ~/.config/fzf/completion.zsh
-source ~/.config/fzf/key-bindings.zsh
+# antigen init ~/.antigenrc
 
 # User configuration
-
+# antigen bundle zsh-users/zsh-autosuggestions
+# clear
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='vim'
+#export PATH=$PATH:~/.cargo/bin/
+#export PATH=$PATH:/usr/local/go/bin
+#export PATH=$PATH:$(go env GOPATH)/bin
+
+
 
 # Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
+# export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias ls='ls --color=yes'
+alias update='sudo apt update -y && sudo apt upgrade -y && sudo snap refresh && sudo apt autoremove'
+alias engkb='setxkbmap -layout us -variant altgr-intl -option ctrl:swapcaps'
+alias swekb='setxkbmap -layout se -option ctrl:swapcaps'
+alias resbg='nitrogen --restore'
+alias multilayout='sh ~/.screenlayout/multi_layout.sh && sleep 2 && resbg'
+alias multilayout3='sh ~/.screenlayout/multi_layout_3.sh && sleep 2 && resbg'
+alias singlelayout='sh ~/.screenlayout/normal_layout.sh && sleep 2 && resbg'
+alias python='python3'
+alias idea='idea &'
+alias vi='nvim'
+alias vim='nvim'
+alias c='clear && tmux clear-history'
+alias runmatlab='matlab -nodesktop -nosplash'
+
+
+# fuzzy search
+source ~/.config/fzf/completion.zsh
+source ~/.config/fzf/key-bindings.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH=${PATH}:/home/woshyy/Documents/teachinguni/facit/utils
+export PATH=${PATH}:/home/woshyy/Documents/teachinguni/student_repos/tddd68/utils
+export PATH=$PATH:/usr/local/share/dotnet
+
+# pnpm
+export PNPM_HOME="/home/woshyy/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

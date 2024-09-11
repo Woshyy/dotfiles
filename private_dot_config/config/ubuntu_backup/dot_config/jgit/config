@@ -1,0 +1,3 @@
+[filesystem "JetBrains s.r.o.|17.0.7|/dev/nvme0n1p2"]
+	timestampResolution = 6502 nanoseconds
+	minRacyThreshold = 7551 microseconds
